@@ -11,16 +11,16 @@ import Footer from './componants/Footer';
 
 function App() {
   return (
-<>
-<Navbar />
+    <>
+    <Navbar/>
     <div className="App">
       <header className="App-meteo">
       <h1> Mon app Meteo</h1>
       </header>
     </div>
-  <Footer />
-</>
-  );
+    <Footer/>
+    </>
+  )
 }
 
 export default App;
