@@ -2,7 +2,7 @@ import React from  'react';
 
 const Footer = () => (
   <div className="footer">
-    <p>This is some content in sticky footer</p>
+    <p>Mon footer simple crée par Tleveq11</p>
   </div>
 );
 

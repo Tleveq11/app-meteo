@@ -1,11 +1,13 @@
 import React from  'react';
 
 
-const Navbar = () => (
+function Navbar() {
+  return (
     <div className="navbar">
-     <p>Weather</p>
+     <p>SUNAPP</p>
     </div>
-    );
+    )
+    };
 
 
 
