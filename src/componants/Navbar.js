@@ -1,16 +1,23 @@
 import React from  'react';
 
 
-function Navbar() {
+
+function Navbar () {
   return (
-    <div className="navbar">
-     <p>SUNAPP</p>
+    <div>
+    <nav>
+      <div className="logo"> Meteo Perso</div>
+      <ul className="nav-links">
+          <li><a>Home</a></li>
+          <li><a>Info</a></li>
+          <li><a>Contact</a></li>
+      </ul>
+    </nav>
     </div>
-    )
-    };
+    );
+
+}
 
 
-
-
-  export default Navbar;
+export default Navbar
 
