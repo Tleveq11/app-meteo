@@ -6,7 +6,8 @@ function Navbar () {
   return (
     <div>
     <nav>
-      <div className="logo"> Meteo Perso</div>
+      <img src="./logometeo.png"/>
+      <div className="logo" > Meteo Perso</div>
       <ul className="nav-links">
           <li><a>Home</a></li>
           <li><a>Info</a></li>

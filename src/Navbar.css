@@ -5,11 +5,16 @@
 }
 
 
-li {
-  list-style-type: none;
-
+body {
+  background:  url(/public/fondecran.jpeg);
+  background-attachment: fixed;
+  background-size: cover;
 }
 
+
+li {
+  list-style-type: none;
+}
 
 
 a {
@@ -52,3 +57,7 @@ nav .nav-links a:hover {
   border-bottom: 1px solid steelblue;
 }
 
+img {
+  width:  8%;
+  height: 8%;
+}
