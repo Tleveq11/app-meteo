@@ -28,9 +28,7 @@ const searchLocation = (e) => {
   }
 }
 
-
-
-  return (
+ return (
     <>
     <div>
      <Navbar />
@@ -74,5 +72,6 @@ const searchLocation = (e) => {
     </>
   )
 }
+
 
 export default App;
