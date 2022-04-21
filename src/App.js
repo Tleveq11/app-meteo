@@ -11,16 +11,11 @@ import Footer from './componants/Footer';
 
 
 
-
-
-
-
-
 function App() {
   const [data, setData] = useState({})
   const [ location, setLocation] = useState ('')
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=ea15a20afb45d9e76ea180cd56089bd0`
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}6&appid=ea15a20afb45d9e76ea180cd56089bd0`
 
 
 const searchLocation = (e) => {
@@ -46,7 +41,7 @@ const searchLocation = (e) => {
      onChange= {e => setLocation(e.target.value)}
      onKeyPress={searchLocation}
      placeholder= 'entrez votre ville'
-     type="text"/>
+     type="text" />
      </div>
 
       <div className="location">
