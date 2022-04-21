@@ -17,7 +17,6 @@ function App() {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=ea15a20afb45d9e76ea180cd56089bd0`
 
 
-
 const searchLocation = (e) => {
   if (e.key === 'Enter') {
     axios.get(url).then((response) => {
@@ -43,10 +42,10 @@ const searchLocation = (e) => {
      </div>
 
       <div className="location">
-        <p> La Barben </p>
+        <p> {data.name}</p>
       </div>
       <div className="temp">
-        <h1>30°</h1>
+        <h1> {data.main.temp}</h1>
       </div>
        <div className="description">
         <p> nuageux </p>
