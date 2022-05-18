@@ -21,7 +21,6 @@ const searchLocation = (e) => {
   if (e.key === 'Enter') {
     axios.get(url).then((response) => {
       setData(response.data)
-      console.log(response.data)
     })
     setLocation('')
   }
@@ -42,11 +41,11 @@ const searchLocation = (e) => {
      </div>
 
       <div className="location">
-        <p> {data.name}</p>
+       <p> {data.name}</p>
 
       </div>
       <div className="temp">
-         {data.main ? <h1> {data.main.temp}</h1> : null}
+         {data.main ? <h1>{data.main.temp}</h1> : null}
         <p>Temperature</p>
       </div>
        <div className="description">
@@ -56,17 +55,17 @@ const searchLocation = (e) => {
      <div className="bottom">
       <div className="feels">
         <p className="bold"></p>
-        {data.main ? <h1> {data.main.fells_like}</h1> : null}
+        {data.main ? <h1>{data.main.fells_like}</h1> : null}
          <p>Ressenti</p>
       </div>
         <div className="humidity">
         <p className="bold"></p>
-        {data.main ? <h1> {data.main.humidity}</h1> : null}
+        {data.main ? <h1>{data.main.humidity}</h1> : null}
         <p>Humidité</p>
         </div>
       <div className="wind">
           <p className="bold"></p>
-          {data.main ? <h1> {data.main.temp}</h1> : null}
+          {data.main ? <h1>{data.main.temp}</h1> : null}
           <p>Vent</p>
       </div>
      </div>
