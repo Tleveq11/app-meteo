@@ -9,8 +9,6 @@ import './Footer.css';
 import Navbar from './componants/Navbar';
 import Footer from './componants/Footer';
 
-
-
 function App() {
   const [data, setData] = useState({})
   const [ location, setLocation] = useState ('')
