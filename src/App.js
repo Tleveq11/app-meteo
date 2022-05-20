@@ -12,15 +12,16 @@ import Footer from './componants/Footer';
 
 
 function App() {
-  const [data, setData] = useState()
+  const [data, setData] = useState({})
   const [ location, setLocation] = useState ('')
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=ea15a20afb45d9e76ea180cd56089bd0`
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&lang={fr}&units=metric&appid=ea15a20afb45d9e76ea180cd56089bd0`
 
 
 const searchLocation = (e) => {
   if (e.key === 'Enter') {
     axios.get(url).then((response) => {
       setData(response.data)
+      console.log(response.data)
     })
     setLocation('')
   }
@@ -41,34 +42,35 @@ const searchLocation = (e) => {
      </div>
 
       <div className="location">
-       <p> {data.name}</p>
+        <p>{data.name}</p> 
+      </div>
 
-      </div>
       <div className="temp">
-         {data.main ? <h1>{data.main.temp}</h1> : null}
+         {data.main ? <h1>{data.main.temp.toFixed()}°C</h1> : null}
         <p>Temperature</p>
       </div>
+
        <div className="description">
-       {data.weather ? <h1> {data.weather.main}</h1> : null}
-        <p>Temperature</p>
+       {data.weather ? <p className="bold"> {data.weather[0].main}</p> : null}
       </div>
+
      <div className="bottom">
       <div className="feels">
-        <p className="bold"></p>
-        {data.main ? <h1>{data.main.fells_like}</h1> : null}
+        {data.main ? <p className="bold">{data.main.feels_like.toFixed()}</p> : null}
          <p>Ressenti</p>
       </div>
+
         <div className="humidity">
-        <p className="bold"></p>
-        {data.main ? <h1>{data.main.humidity}</h1> : null}
+        {data.main ? <p className="bold">{data.main.humidity}%</p> : null}
         <p>Humidité</p>
         </div>
+
       <div className="wind">
-          <p className="bold"></p>
-          {data.main ? <h1>{data.main.temp}</h1> : null}
+          {data.main ? <p className="bold">{data.main.temp.toFixed()}</p> : null}
           <p>Vent</p>
       </div>
      </div>
+
     </div>
      <Footer />
     </div>
